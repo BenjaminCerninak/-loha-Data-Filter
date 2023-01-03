@@ -11,15 +11,26 @@ const greaterBtn = document.querySelector(".greater-than");
 const confirmBtn = document.querySelector(".confirm");
 const resetBtn = document.querySelector(".reset");
 
-// test data
-const testData = [
-  2, 3, 4, 2, 4, 65, 543487656789876, 987678987678987, 898767898763345, 665,
-  332, 54, -99, -665, -87, 6787, 98789, 678, 8765, 45, 34567, 4567, 45678,
-  45678, 567, 66, 55, 54, 3445, 5566, 7665,
-];
-
 let activeArrays = [];
 let filteredData = [];
+let testData;
+
+// function to create an array for test data
+const randomArr = (length, max) =>
+  Array(length)
+    .fill()
+    .map(() => Math.floor(Math.random() * max));
+
+// update UI
+updateUI();
+
+// test data
+
+// const testData = [
+//   2, 3, 4, 2, 4, 65, 543487656789876, 987678987678987, 898767898763345, 665,
+//   332, 54, -99, -665, -87, 6787, 98789, 678, 8765, 45, 34567, 4567, 45678,
+//   45678, 567, 66, 55, 54, 3445, 5566, 7665,
+// ];
 
 // Update DOM
 updateDOM(testData);
@@ -46,6 +57,7 @@ function updateUI() {
   sortLargeBtn.classList = "sort-large option";
   duplicates.classList = "duplicates option";
   confirmBtn.disabled = false;
+  testData = [...randomArr(80, -1000), ...randomArr(80, 1000)];
 }
 
 // if no number left function

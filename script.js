@@ -24,14 +24,6 @@ const randomArr = (length, max) =>
 // update UI
 updateUI();
 
-// test data
-
-// const testData = [
-//   2, 3, 4, 2, 4, 65, 543487656789876, 987678987678987, 898767898763345, 665,
-//   332, 54, -99, -665, -87, 6787, 98789, 678, 8765, 45, 34567, 4567, 45678,
-//   45678, 567, 66, 55, 54, 3445, 5566, 7665,
-// ];
-
 // Update DOM
 updateDOM(testData);
 function updateDOM(data) {
